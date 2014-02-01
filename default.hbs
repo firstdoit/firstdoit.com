@@ -5,42 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     <title>{{meta_title}}</title>
-    <meta name="description" content="{{meta_description}}" />
+    <meta name="description" content="{{@blog.description}}" />
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 
-    <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "style/normalize.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "highlight/styles/github.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "could-you-possibly-0.1.1/style/could-you-possibly.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "style/screen.css"}}" />
 
     {{#if pagination.next}}<link href="{{page_url pagination.next}}" rel="prefetch" />{{/if}}
+
+    <!-- Google Authorship and Publisher Markup -->
+    <link rel="author" href="https://plus.google.com/+GuilhermeRodrigues90/posts"/>
+    <link rel="publisher" href="https://plus.google.com/+GuilhermeRodrigues90"/>
+
+    <!--Google+ Schema.org meta-->
+    <meta itemprop="name" content="{{meta_title}}">
+    <meta itemprop="description" content="{{@blog.description}}">
+    <meta itemprop="image" content="{{@blog.url}}{{@blog.logo}}">
+
+    <!--Twitter meta-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@first_doit">
+    <meta name="twitter:title" content="{{meta_title}}">
+    <meta name="twitter:description" content="{{@blog.description}}">
+    <meta name="twitter:creator" content="@first_doit">
+
+    <!--Facebook meta-->
+    <meta property="og:image" content="{{@blog.url}}{{@blog.logo}}"/>
+    <meta property="og:site_name" content="{{meta_title}}"/>
+    <meta property="og:type" content="blog"/>
+    <meta property="og:description" content="{{@blog.description}}" />
+    {{#if post}}
+    {{#post}}
+    <meta property="og:title" content="{{title}}"/>
+    <meta property="og:url" content="{{url absolute="true"}}"/>
+    {{/post}}
+    {{else}}
+    <meta property="og:title" content="{{meta_title}}"/>
+    <meta property="og:url" content="{{@blog.url}}"/>
+    {{/if}}
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-42473058-2', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
 
-    <header id="site-head">
-        {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><div class="bloglogo" style="background: url({{@blog.logo}})"></div></a>{{/if}}
+    <header class="site-head">
+        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><div style="background: url({{@blog.logo}})"></div></a>{{/if}}
         <h1 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
-        {{> header-description}}
-        {{!> menu}}
+        <h2 class="blog-description">
+            {{@blog.description}}
+        </h2>
+        <div class="blog-links">
+            <a href="http://facebook.com/gadr90" target="_blank"><i class="fa facebook-custom-fa"></i></a>
+            <a href="http://twitter.com/first_doit" target="_blank"><i class="fa twitter-custom-fa"></i></a>
+            <a href="http://github.com/firstdoit" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="mailto:gui@firstdoit.com" target="_blank"><i class="fa fa-envelope"></i></a>
+        </div>
     </header>
 
     {{{body}}}
 
     <footer class="site-footer">
         <div class="inner">
-            {{!> footer-description}}
-            <section class="copyright">&copy; {{date format="YYYY"}} <a href="/">{{@blog.title}}</a>. All rights reserved.</section>
-            <section>Vapor theme by <a href="http://sethlilly.com/">Seth Lilly</a></section>
-            <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org/"><span class="hidden">Ghost</span></a></section>
+             <section class="copyright">&copy; {{date format="YYYY"}} <a href="/">{{@blog.title}}</a>. All rights reserved.</section>
+             <section><a href="https://github.com/firstdoit/mercury-vapor">Mercury Vapor</a> theme by Guilherme Rodrigues</section>
+             <section>Forked from Vapor by <a href="http://sethlilly.com/">Seth Lilly</a></section>
+             <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org"><span class="hidden">Ghost</span></a></section>
         </div>
     </footer>
 
     {{ghost_foot}}
 
-    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <script type="text/javascript" src="{{asset "script/main.js"}}"></script>
+    <script type="text/javascript" src="{{asset "highlight/highlight.pack.js"}}"></script>
+    <script type="text/javascript" src="{{asset "could-you-possibly-0.1.1/script/could-you-possibly.min.js"}}"></script>
+    <script>
+        (function(){
+            $(function(){
+                if (window.location.search.indexOf('share=old') != -1) {
+                    return;
+                }
+                var options = {
+                    selector: 'section.share',
+                    url: '{{#post}}{{url absolute="true"}}{{/post}}',
+                    title: '{{#post}}{{title}}{{/post}}',
+                    author: 'first_doit'
+                };
+                new CouldYouPossibly(options);
+            });
+        })();
+    </script>
 </body>
 </html>
