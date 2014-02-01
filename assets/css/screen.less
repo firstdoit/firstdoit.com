@@ -1,22 +1,14 @@
-// This file is horribly organized. I'm going to revamp it in 1.5.
-
-// Imports
-
-@import url('//fonts.googleapis.com/css?subset=latin,cyrillic-ext,latin-ext,cyrillic&family=Open+Sans+Condensed:300|Open+Sans:400,600,400italic,600italic|Merriweather:400,300,300italic,400italic,700,700italic|Roboto+Slab:400,300');
-@import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
-
 // Variables
 
 @bodyBackgroundColor: #ffffff;
-@baseFontFamily: "Merriweather", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
-@baseFontColor: #7f8c8d;
-@headerFontFamily: "Roboto Slab", @baseFontFamily;
+@baseFontFamily: "Vollkorn", serif;
+@baseFontColor: #373c3d;
+@headerFontFamily: "Ubuntu", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
 @headerFontColor: #151515;
 @headerLinkColor: @headerFontColor;
-@secondaryFontFamily: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+@secondaryFontFamily: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
 @preFontFamily: "Consolas", Courier, monospace;
-@tableFontFamily: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
-@linkColor: #3498db;
+@linkColor: #46ba5f;
 @linkColorHover: darken(@linkColor, 50%);
 @borderColor: #ecf0f1;
 @subtleColor: rgba(0,0,0,0.05);
@@ -28,6 +20,9 @@
 // Styles
 
 /* === Core Styles === */
+
+@import url(//fonts.googleapis.com/css?family=Ubuntu:400,700|Open+Sans:300|Vollkorn:400italic,400,700);
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
 body {
     background-color: @bodyBackgroundColor;
@@ -107,7 +102,7 @@ h1 {
     padding: 0;
 }
 
-#site-head, article, article.preview, a.archive-link, .article-nav {
+#site-head, article, nav, article.preview, a.archive-link, .article-nav {
     margin: 20px auto;
     max-width: @maxPageWidth;
     width: 90%;
@@ -120,10 +115,10 @@ h1 {
 article.preview {
     margin-bottom: 4em;
     p.readmore {
-      font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
       margin-top: 1em;
       text-transform: uppercase;
-      font-weight: 400;
+      font-weight: 300;
     }
 }
 
@@ -154,18 +149,29 @@ h1.blog-title {
     margin-top: 10px;
     margin-bottom: 30px;
     padding: 0;
+    text-transform: uppercase;
 }
 
 h2.blog-description {
+    font-family: @secondaryFontFamily;
     border-bottom: 1px solid @borderColor;
     border-top: 1px solid @borderColor;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     padding: .5em 1em;
     line-height: 1.2em;
+    text-transform: none;
+    a {
+      margin: 5px 10px;
+    }
 }
 
-section.footer-description {
-    margin-bottom: 1em;
+.blog-links {
+    text-align: center;
+    margin-bottom: 2em;
+    a {
+      font-size: 200%;
+      margin: 5px 10px;
+    }
 }
 
 header.article-header, header.page-header {
@@ -205,11 +211,6 @@ section.author p.attr, section.share p.info {
     font-family: @secondaryFontFamily;
 }
 
-section.share p.info.prompt {
-    top: -5px;
-    position: relative;
-}
-
 section.author p.attr {
     margin-bottom: 2px
 }
@@ -230,7 +231,6 @@ blockquote {
     font-weight: 300;
     line-height: 1.2em;
     font-style: italic;
-    text-transform: uppercase;
     border-left: .5em solid @subtleColor;
     margin-left: 1em;
     padding-left: 1em;
@@ -242,7 +242,6 @@ blockquote {
         font-weight: 300;
         line-height: 1.2em;
         font-style: italic;
-        text-transform: uppercase;
     }
 
 .post-meta {
@@ -282,10 +281,16 @@ h1.post-title a:focus, h1.post-title a:hover, h1.blog-title a:focus, h1.blog-tit
 }
 
 h2 {
-    font-family: @secondaryFontFamily;
     margin-top: 2em;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
 }
 
 section.post-content img {
@@ -341,60 +346,47 @@ footer.post-footer {
 nav {
     border-bottom: 1px solid @borderColor;
     border-top: 1px solid @borderColor;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
     text-align: center;
-    margin: 20px auto 2em auto;
-    max-width: @maxPageWidth;
-    ul {
+}
+
+    nav ul {
         list-style: none;
         margin: 0 auto;
         padding: 0;
         width: 100%;
         overflow: hidden;
         text-align: center;
-        li {
-            display: inline-block;
-            font-family: @secondaryFontFamily;
-            font-size: 18px;
-            font-weight: 300;
-            margin: 0;
-            padding: 0 .5em;
-            text-align: center;
-            text-transform: uppercase;
-            a {
-                display: block;
-                padding: .5em 0;
-            }
-        }
     }
-    &.menu {
-        margin-bottom: 2.5em;
-        li {
-            margin: 0 .5em;
-            padding: 0;
-            &:last-child {
-                margin: 0;
-            }
-            @media only screen and (min-width: 320px) and (max-width: 662px) {
-                display: block;
-            }
-        }
+
+    nav li {
+        display: inline-block;
+        font-family: @secondaryFontFamily;
+        font-size: 18px;
+        font-weight: 300;
+        margin: 0 2em;
+        padding: 0;
+        text-align: center;
+        text-transform: uppercase;
+        width: 4em;
     }
-    &.pagination {
-        li {
-            &:first-child {
-                margin-left: 0;
-                margin-right: 0;
-                text-align: right;
-            }
-            &:last-child {
-                margin-left: 0;
-                margin-right: 0;
-                text-align: left;
-            }
+
+        nav li a {
+            display: block;
+            padding: .5em 0;
         }
+
+    nav li:first-child {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: right;
     }
-}
+
+    nav li:last-child {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+    }
 
 a.archive-link {
     border-bottom: 1px solid @borderColor;
@@ -509,7 +501,7 @@ a.archive-link {
     font-style: normal;
 }
 
-.icon-ghost, .icon-feed {
+.icon-ghost, .icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook {
     font-family: 'icons';
     speak: none;
     font-style: normal;
@@ -521,6 +513,10 @@ a.archive-link {
     text-decoration: none;
 }
 
+.icon-twitter, .icon-google-plus, .icon-facebook {
+    padding-left: 0.5em
+}
+
 .icon-ghost:before {
     content: "\e000"
 }
@@ -529,42 +525,23 @@ a.archive-link {
     content: "\e001"
 }
 
+.icon-twitter:before {
+    content: "\e002";
+    font-size: 1.1em;
+}
+
+.icon-google-plus:before {
+    content: "\e003"
+}
+
+.icon-facebook:before {
+    content: "\e004"
+}
+
 .icon-ghost {
     font-size: 12px;
     position: relative;
     top: -1px;
-}
-
-/* Comments */
-
-#disqus_thread {
-    color: #787878; 
-}
-
-/* Tables */
-
-table {
-    width: 100%;
-    font-family: @tableFontFamily;
-    border-collapse: collapse;
-    margin: 1em 0 3em;
-    td {
-        padding: .5em;
-    }
-    thead {
-        font-weight: 600;
-        border-bottom: 1px solid @borderColor;
-    }
-    tbody {
-        tr:nth-child(even) {
-            background-color: @borderColor;
-            border-top: 1px solid darken(@borderColor, 3%);
-            border-bottom: 1px solid darken(@borderColor, 3%);
-        }
-    }
-    tfoot {
-        border-top: 1px solid @borderColor;
-    }
 }
 
 /* === Media Queries === */
