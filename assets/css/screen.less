@@ -139,17 +139,20 @@ article.preview {
     }
 }
 
-h1.blog-title, h2.blog-description {
+h1.blog-title, h2.blog-title, h2.blog-description {
     text-align: center
 }
 
-h1.blog-title {
-    font-size: 48px;
-    line-height: 52px;
+h1.blog-title, h2.blog-title {
+    font-size: 38px;
     margin-top: 10px;
     margin-bottom: 30px;
     padding: 0;
     text-transform: uppercase;
+    color: @headerFontColor;
+    font-family: @baseFontFamily;
+    font-weight: 700;
+    line-height: 42px;
 }
 
 h2.blog-description {
@@ -158,6 +161,7 @@ h2.blog-description {
     border-top: 1px solid @borderColor;
     margin-bottom: 1em;
     padding: .5em 1em;
+    font-size: 1.2em;
     line-height: 1.2em;
     text-transform: none;
     a {
@@ -269,13 +273,13 @@ div.authorimage {
   float: left;
 }
 
-h1.post-title a, h1.blog-title a {
+h1.post-title a, h1.blog-title a, h2.blog-title a {
     color: @headerLinkColor;
     transition: color ease 0.7s;
     -webkit-transition: color ease 0.7s;
 }
 
-h1.post-title a:focus, h1.post-title a:hover, h1.blog-title a:focus, h1.blog-title a:hover {
+h1.post-title a:focus, h1.post-title a:hover, h1.blog-title a:focus, h2.blog-title a:focus, h1.blog-title a:hover , h2.blog-title a:hover {
     color: @linkColor;
     text-decoration: none;
 }
@@ -285,6 +289,10 @@ h2 {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.1em;
+}
+
+h2.blog-title {
+    letter-spacing: inherit;
 }
 
 h3 {
@@ -314,6 +322,10 @@ img.userimage {
     border-radius: 50%;
     margin-right: 10px;
     float: left;
+}
+
+strong {
+  line-height: 1em;
 }
 
 /* === Footer === */
@@ -542,6 +554,14 @@ a.archive-link {
     font-size: 12px;
     position: relative;
     top: -1px;
+}
+
+#disqus_thread {
+  color: #787878;
+}
+
+.hn-button {
+  margin-bottom: -4px;
 }
 
 /* === Media Queries === */
