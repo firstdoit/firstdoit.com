@@ -497,8 +497,8 @@ a.archive-link {
 #disqus_thread {
   color: #787878;
 }
-.hn-button {
-  margin-bottom: -4px;
+.hn-share-iframe {
+  margin-bottom: -5px;
 }
 /* === Media Queries === */
 @media only screen and (min-width: 320px) and (max-width: 500px) {
