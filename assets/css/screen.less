@@ -3,10 +3,10 @@
 @bodyBackgroundColor: #ffffff;
 @baseFontFamily: "Vollkorn", serif;
 @baseFontColor: #373c3d;
-@headerFontFamily: "Ubuntu", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+@headerFontFamily: "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
 @headerFontColor: #151515;
 @headerLinkColor: @headerFontColor;
-@secondaryFontFamily: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+@secondaryFontFamily: "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
 @preFontFamily: "Consolas", Courier, monospace;
 @linkColor: #46ba5f;
 @linkColorHover: darken(@linkColor, 50%);
@@ -21,7 +21,7 @@
 
 /* === Core Styles === */
 
-@import url(//fonts.googleapis.com/css?family=Ubuntu:400,700|Open+Sans:300|Vollkorn:400italic,400,700);
+@import url(//fonts.googleapis.com/css?family=Ubuntu:400,700|Vollkorn:400italic,400,700);
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
 body {
@@ -159,6 +159,7 @@ h2.blog-description {
     font-family: @secondaryFontFamily;
     border-bottom: 1px solid @borderColor;
     border-top: 1px solid @borderColor;
+    font-weight: 400;
     margin-bottom: 1em;
     padding: .5em 1em;
     font-size: 1.2em;
@@ -231,8 +232,8 @@ section.author p.bio {
 
 blockquote {
     font-family: @secondaryFontFamily;
-    font-size: 1.6em;
-    font-weight: 300;
+    font-size: 1.4em;
+    font-weight: 400;
     line-height: 1.2em;
     font-style: italic;
     border-left: .5em solid @subtleColor;
@@ -242,8 +243,8 @@ blockquote {
 
     blockquote p {
         font-family: @secondaryFontFamily;
-        font-size: 1.6em;
-        font-weight: 300;
+        font-size: 1.4em;
+        font-weight: 400;
         line-height: 1.2em;
         font-style: italic;
     }

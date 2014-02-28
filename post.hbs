@@ -18,7 +18,7 @@
 
         <section class="share">
             <p class="info">Share this post</p>
-            <a class="icon-twitter" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
+            <a class="icon-twitter" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}&via=gadr90&related=gadr90"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <span class="hidden">Twitter</span>
             </a>
@@ -30,8 +30,6 @@
                onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                 <span class="hidden">Google+</span>
             </a>
-            <p class="info">&nbspor discuss on Hacker News&nbsp</p>
-            <a href="https://news.ycombinator.com/submit" class="hn-button" data-title="{{title}}" data-url="{{url absolute="true"}}" data-count="horizontal">Vote on Hacker News</a>
         </section>
 
         <footer class="post-footer">
@@ -54,12 +52,3 @@
     </article>
 
 </main>
-
-<script>
-    (function(d, t) {
-        var g = d.createElement(t),
-                s = d.getElementsByTagName(t)[0];
-        g.src = '//hnbutton.appspot.com/static/hn.min.js';
-        s.parentNode.insertBefore(g, s);
-    }(document, 'script'));
-</script>

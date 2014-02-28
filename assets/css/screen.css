@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Ubuntu:400,700|Open+Sans:300|Vollkorn:400italic,400,700);
+@import url(//fonts.googleapis.com/css?family=Ubuntu:400,700|Vollkorn:400italic,400,700);
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 /* === Core Styles === */
 body {
@@ -73,7 +73,7 @@ p code {
 }
 h1 {
   color: #151515;
-  font-family: "Ubuntu", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 42px;
@@ -135,9 +135,10 @@ h2.blog-title {
   line-height: 42px;
 }
 h2.blog-description {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
   border-bottom: 1px solid #ecf0f1;
   border-top: 1px solid #ecf0f1;
+  font-weight: 400;
   margin-bottom: 1em;
   padding: .5em 1em;
   font-size: 1.2em;
@@ -179,7 +180,7 @@ section.share p {
   margin: 0;
 }
 section.author h4 {
-  font-family: "Ubuntu", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
   font-weight: 400;
   margin-bottom: 4px;
 }
@@ -188,7 +189,7 @@ section.share p.info {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
 }
 section.author p.attr {
   margin-bottom: 2px;
@@ -202,9 +203,9 @@ section.author p.bio {
   line-height: 1.4em;
 }
 blockquote {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
-  font-size: 1.6em;
-  font-weight: 300;
+  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+  font-size: 1.4em;
+  font-weight: 400;
   line-height: 1.2em;
   font-style: italic;
   border-left: 0.5em solid rgba(0, 0, 0, 0.05);
@@ -212,15 +213,15 @@ blockquote {
   padding-left: 1em;
 }
 blockquote p {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
-  font-size: 1.6em;
-  font-weight: 300;
+  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+  font-size: 1.4em;
+  font-weight: 400;
   line-height: 1.2em;
   font-style: italic;
 }
 .post-meta {
   color: #95a5a6;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
   font-size: 20px;
   font-weight: 300;
   margin-top: 1em;
@@ -300,7 +301,7 @@ footer {
   text-align: center;
 }
 footer section {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
   font-weight: 300;
   font-size: 18px;
   margin: 0 auto;
@@ -330,7 +331,7 @@ nav ul {
 }
 nav li {
   display: inline-block;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
   font-size: 18px;
   font-weight: 300;
   margin: 0 2em;
@@ -357,7 +358,7 @@ a.archive-link {
   border-bottom: 1px solid #ecf0f1;
   border-top: 1px solid #ecf0f1;
   display: block;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
   font-size: 24px;
   font-weight: 300;
   margin-bottom: 3em;
@@ -370,7 +371,7 @@ a.archive-link {
   position: relative;
   width: 90%;
   max-width: 650px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
   text-transform: uppercase;
   font-size: 20px;
   color: #373c3d;
@@ -416,7 +417,7 @@ a.archive-link {
   border: 1px solid rgba(0, 0, 0, 0.05) !important;
 }
 .gist .gist-file .gist-meta {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif !important;
+  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif !important;
   font-weight: 300 !important;
   text-transform: uppercase !important;
   display: none !important;
