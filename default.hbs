@@ -103,7 +103,7 @@
                 var options = {
                     selector: 'section.share',
                     url: '{{#post}}{{url absolute="true"}}{{/post}}',
-                    title: '{{title}}',
+                    title: '{{#post}}{{title}}{{/post}}',
                     author: 'gadr90'
                 };
                 new CouldYouPossibly(options);
