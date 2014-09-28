@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 
     <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "could-you-possibly-0.1.0/style/could-you-possibly.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
 
     {{#if pagination.next}}<link href="{{page_url pagination.next}}" rel="prefetch" />{{/if}}
@@ -89,6 +90,23 @@
     {{ghost_foot}}
 
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <script type="text/javascript" src="{{asset "could-you-possibly-0.1.0/script/could-you-possibly.min.js"}}"></script>
+    <script>
+        (function(){
+            $(function(){
+                if (window.location.search.indexOf('share=old') != -1) {
+                    return;
+                }
+                var options = {
+                    selector: 'section.share',
+                    url: '{{url absolute="true"}}',
+                    title: '{{title}}',
+                    author: 'gadr90'
+                };
+                new CouldYouPossibly(options);
+            });
+        })();
+    </script>
 </body>
 </html>

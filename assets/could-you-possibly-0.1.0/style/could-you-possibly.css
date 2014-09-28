@@ -1,0 +1,130 @@
+.could-you-possibly {
+  position: relative;
+  min-height: 175px;
+}
+.could-you-possibly .btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.could-you-possibly .btn-link,
+.could-you-possibly .btn-link:hover,
+.could-you-possibly .btn-link:focus,
+.could-you-possibly .btn-link:active {
+  border-color: transparent;
+}
+.could-you-possibly .btn-link,
+.could-you-possibly .btn-link:active,
+.could-you-possibly .btn-link[disabled],
+.could-you-possibly fieldset[disabled] .btn-link {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.could-you-possibly .btn-link {
+  font-weight: normal;
+  color: #428bca;
+  cursor: pointer;
+  border-radius: 0;
+}
+.could-you-possibly .state {
+  min-height: 200px;
+  min-width: 650px;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .1s linear, visibility 0s linear;
+}
+.could-you-possibly .state .icon-twitter,
+.could-you-possibly .state .icon-google-plus,
+.could-you-possibly .state .icon-facebook {
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+.could-you-possibly .state .icon-twitter,
+.could-you-possibly .state .icon-google-plus,
+.could-you-possibly .state .icon-facebook {
+  padding-left: 0.5em;
+}
+.could-you-possibly .state .icon-twitter:before {
+  content: "\e002";
+  font-size: 1.1em;
+}
+.could-you-possibly .state .icon-google-plus:before {
+  content: "\e003";
+}
+.could-you-possibly .state .icon-facebook:before {
+  content: "\e004";
+}
+.could-you-possibly .state a,
+.could-you-possibly .state a:visited {
+  color: #46ba5f;
+  text-decoration: none;
+  transition: color ease 0.7s;
+  -webkit-transition: color ease 0.7s;
+}
+.could-you-possibly .state a:focus,
+.could-you-possibly .state a:hover {
+  color: #000100;
+  text-decoration: none;
+}
+.could-you-possibly .state.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .3s linear, visibility 0s linear;
+}
+.could-you-possibly .state button.yes,
+.could-you-possibly .state button.no {
+  background-color: #46ba5f;
+  color: white;
+  font-weight: bold;
+  font-size: 1.6em;
+  text-decoration: none;
+  width: 100px;
+  transition: background-color ease 0.7s;
+  -webkit-transition: background-color ease 0.7s;
+}
+.could-you-possibly .state button.yes:focus,
+.could-you-possibly .state button.yes:hover {
+  background-color: #00d49c;
+  text-decoration: none;
+}
+.could-you-possibly .state button.no:focus,
+.could-you-possibly .state button.no:hover {
+  background-color: #d4ce00;
+  text-decoration: none;
+}
+.could-you-possibly .state.greeting .share-buttons {
+  margin-top: 20px;
+}
+.could-you-possibly .state.yes .icon-twitter,
+.could-you-possibly .state.yes .icon-google-plus,
+.could-you-possibly .state.yes .icon-facebook {
+  font-size: 3em;
+}
+.could-you-possibly .state.yes .share-buttons {
+  margin: 20px;
+}
