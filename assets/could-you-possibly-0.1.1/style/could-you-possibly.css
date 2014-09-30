@@ -1,6 +1,7 @@
 .could-you-possibly {
   position: relative;
   min-height: 175px;
+  width: 100%;
 }
 .could-you-possibly .btn {
   display: inline-block;
@@ -43,12 +44,24 @@
   border-radius: 0;
 }
 .could-you-possibly .state {
-  min-height: 200px;
-  min-width: 650px;
+  min-height: 175px;
+  width: 100%;
   position: absolute;
   opacity: 0;
   visibility: hidden;
   transition: opacity .1s linear, visibility 0s linear;
+}
+.could-you-possibly .state.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .3s linear, visibility 0s linear;
+}
+@font-face {
+  font-family: 'icons';
+  src: url('../../fonts/icons.eot');
+  src: url('../../fonts/icons.eot?#iefix') format('embedded-opentype'), url('../../fonts/icons.woff') format('woff'), url('../../fonts/icons.ttf') format('truetype'), url('../../fonts/icons.svg#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 .could-you-possibly .state .icon-twitter,
 .could-you-possibly .state .icon-google-plus,
@@ -90,11 +103,6 @@
 .could-you-possibly .state a:hover {
   color: #000100;
   text-decoration: none;
-}
-.could-you-possibly .state.active {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity .3s linear, visibility 0s linear;
 }
 .could-you-possibly .state button.yes,
 .could-you-possibly .state button.no {
