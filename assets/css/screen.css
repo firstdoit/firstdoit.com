@@ -522,3 +522,9 @@ a.archive-link {
     display: block;
   }
 }
+.facebook-custom-fa:before {
+  content: "\f09a";
+}
+.twitter-custom-fa:before {
+  content: "\f099";
+}
