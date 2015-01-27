@@ -29,10 +29,10 @@
 
     <!--Twitter meta-->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@guimakes">
+    <meta name="twitter:site" content="@first_doit">
     <meta name="twitter:title" content="{{meta_title}}">
     <meta name="twitter:description" content="{{@blog.description}}">
-    <meta name="twitter:creator" content="@guimakes">
+    <meta name="twitter:creator" content="@first_doit">
 
     <!--Facebook meta-->
     <meta property="og:image" content="{{@blog.url}}{{@blog.logo}}"/>
@@ -55,7 +55,7 @@
                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-42473058-2', 'gadr.me');
+        ga('create', 'UA-42473058-2', 'firstdoit.com');
         ga('send', 'pageview');
 
     </script>
@@ -71,9 +71,10 @@
             {{@blog.description}}
         </h2>
         <div class="blog-links">
-            <a href="http://facebook.com/gadr90"><i class="fa fa-facebook"></i></a>
-            <a href="http://github.com/gadr"><i class="fa fa-github"></i></a>
-            <a href="mailto:gadr90+blog@gmail.com"><i class="fa fa-envelope"></i></a>
+            <a href="http://facebook.com/gadr90" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="http://twitter.com/guimakes" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="http://github.com/gadr" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="mailto:guimakes+blog@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
         </div>
     </header>
 
@@ -82,7 +83,7 @@
     <footer class="site-footer">
         <div class="inner">
              <section class="copyright">&copy; {{date format="YYYY"}} <a href="/">{{@blog.title}}</a>. All rights reserved.</section>
-             <section><a href="https://github.com/gadr/mercury-vapor">Mercury Vapor</a> theme by Guilherme Rodrigues</section>
+             <section><a href="https://github.com/firstdoit/mercury-vapor">Mercury Vapor</a> theme by Guilherme Rodrigues</section>
              <section>Forked from Vapor by <a href="http://sethlilly.com/">Seth Lilly</a></section>
              <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org"><span class="hidden">Ghost</span></a></section>
         </div>
@@ -104,7 +105,7 @@
                     selector: 'section.share',
                     url: '{{#post}}{{url absolute="true"}}{{/post}}',
                     title: '{{#post}}{{title}}{{/post}}',
-                    author: 'guimakes'
+                    author: 'first_doit'
                 };
                 new CouldYouPossibly(options);
             });
