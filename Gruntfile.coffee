@@ -63,19 +63,28 @@ module.exports = (grunt) ->
         src: ['*.css', '!*.min.css']
         dest: 'assets/style/'
 
+    connect:
+      http:
+        options:
+          hostname: "*"
+          port: process.env.PORT || 80
+          livereload: true
+
     watch:
+      options:
+        livereload: true
       coffee:
         files: ['assets/**/*.coffee']
-        tasks: ['coffeelint', 'coffee']
-      js:
-        files: ['assets/script/**/*.js']
-        tasks: ['uglify']
+        tasks: ['coffeelint', 'coffee', 'uglify']
       less:
+        options:
+          livereload: false
         files: ['assets/**/*.less']
-        tasks: ['recess', 'less']
+        tasks: ['recess', 'less', 'cssmin']
       css:
         files: ['assets/style/**/*.css']
-        tasks: ['cssmin']
+      templates:
+        files: ['*.hbs', 'partials/*.hbs']
       grunt:
         files: ['Gruntfile.coffee']
 
@@ -83,7 +92,7 @@ module.exports = (grunt) ->
     # Building block tasks
     build: ['coffeelint', 'coffee', 'uglify', 'recess', 'less', 'cssmin']
     # Development tasks
-    default: ['build', 'watch']
+    default: ['build', 'connect', 'watch']
 
   # Project configuration.
   grunt.initConfig config
