@@ -64,30 +64,11 @@
 </head>
 <body class="{{body_class}}">
 
-    <header class="site-head">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><div style="background: url({{@blog.logo}})"></div></a>{{/if}}
-        <h1 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
-        <h2 class="blog-description">
-            {{@blog.description}}
-        </h2>
-        <div class="blog-links">
-            <a href="http://facebook.com/gadr90" target="_blank"><i class="fa facebook-custom-fa"></i></a>
-            <a href="http://twitter.com/first_doit" target="_blank"><i class="fa twitter-custom-fa"></i></a>
-            <a href="http://github.com/firstdoit" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="mailto:gui@firstdoit.com" target="_blank"><i class="fa fa-envelope"></i></a>
-        </div>
-    </header>
+    {{> header}}
 
     {{{body}}}
 
-    <footer class="site-footer">
-        <div class="inner">
-             <section class="copyright">&copy; {{date format="YYYY"}} <a href="/">{{@blog.title}}</a>. All rights reserved.</section>
-             <section><a href="https://github.com/firstdoit/mercury-vapor">Mercury Vapor</a> theme by Guilherme Rodrigues</section>
-             <section>Forked from Vapor by <a href="http://sethlilly.com/">Seth Lilly</a></section>
-             <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org"><span class="hidden">Ghost</span></a></section>
-        </div>
-    </footer>
+    {{> footer}}
 
     {{ghost_foot}}
 
@@ -98,9 +79,6 @@
     <script>
         (function(){
             $(function(){
-                if (window.location.search.indexOf('share=old') != -1) {
-                    return;
-                }
                 var options = {
                     selector: 'section.share',
                     url: '{{#post}}{{url absolute="true"}}{{/post}}',
