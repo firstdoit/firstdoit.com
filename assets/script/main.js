@@ -1,0 +1,2 @@
+(function(){var a;a=["Nothing to see here. Move along...","These are not the droids you're looking for...","This is no moon..."],console.log(_.sample(a)),console.log("But have you been to http://firstdoit.com?")}).call(this);
+//# sourceMappingURL=main.js.map
