@@ -7,9 +7,9 @@ module.exports = (grunt) ->
       main:
         files: [
           expand: true
-          cwd: 'assets/'
+          cwd: 'assets/script'
           src: ['**/*.coffee']
-          dest: "assets/"
+          dest: "assets/script"
           ext: '.js'
         ]
 
@@ -44,9 +44,9 @@ module.exports = (grunt) ->
       main:
         files: [
           expand: true
-          cwd: 'assets/'
-          src: ['**/*.less']
-          dest: "assets/"
+          cwd: 'assets/style'
+          src: ['**/*.less', '!variables.less']
+          dest: "assets/style"
           ext: '.css'
         ]
 
@@ -54,7 +54,7 @@ module.exports = (grunt) ->
       options:
         strictPropertyOrder: false
       main:
-        src: ['assets/style/**/*.less']
+        src: ['assets/style/screen.less']
 
     cssmin:
       main:
@@ -74,12 +74,12 @@ module.exports = (grunt) ->
       options:
         livereload: true
       coffee:
-        files: ['assets/**/*.coffee']
+        files: ['assets/script/**/*.coffee']
         tasks: ['coffeelint', 'coffee', 'uglify']
       less:
         options:
           livereload: false
-        files: ['assets/**/*.less']
+        files: ['assets/style/**/*.less']
         tasks: ['recess', 'less', 'cssmin']
       css:
         files: ['assets/style/**/*.css']
