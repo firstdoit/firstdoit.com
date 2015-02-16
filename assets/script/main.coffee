@@ -15,8 +15,8 @@ headroom
 ###
 
 headroom = new Headroom $('.navbar')[0],
-  "offset": 5
-  "tolerance": 5
+  "offset": 0
+  "tolerance": 0
   "classes":
     "initial": "animated"
     "pinned": "slideDown"
