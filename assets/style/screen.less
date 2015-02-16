@@ -2,6 +2,8 @@
 @import 'variables.less';
 
 // Styles
+@import "headroom";
+@import "header";
 
 /* === Core Styles === */
 
@@ -82,10 +84,10 @@ h1 {
   color: @headerFontColor;
 }
 
-.site-head, article, nav, .preview, .archive-link, .article-nav {
+article, .preview, .archive-link, .article-nav {
   width: 90%;
   max-width: @maxPageWidth;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 .site-head img {
@@ -332,50 +334,54 @@ footer section {
 }
 
 /* === Navigation and Pagination === */
+.blog {
+  .pagination {
+    margin: 0 auto;
+  }
+  nav {
+    border-bottom: 1px solid @borderColor;
+    border-top: 1px solid @borderColor;
+    margin-bottom: 3em;
+    text-align: center;
+  }
 
-nav {
-  border-bottom: 1px solid @borderColor;
-  border-top: 1px solid @borderColor;
-  margin-bottom: 3em;
-  text-align: center;
-}
+  nav ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+  }
 
-nav ul {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
-  overflow: hidden;
-  text-align: center;
-}
+  nav li {
+    display: inline-block;
+    font-family: @secondaryFontFamily;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 2em;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 4em;
+  }
 
-nav li {
-  display: inline-block;
-  font-family: @secondaryFontFamily;
-  font-size: 18px;
-  font-weight: 300;
-  margin: 0 2em;
-  padding: 0;
-  text-align: center;
-  text-transform: uppercase;
-  width: 4em;
-}
+  nav li a {
+    display: block;
+    padding: .5em 0;
+  }
 
-nav li a {
-  display: block;
-  padding: .5em 0;
-}
+  nav li:first-child {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: right;
+  }
 
-nav li:first-child {
-  margin-left: 0;
-  margin-right: 0;
-  text-align: right;
-}
-
-nav li:last-child {
-  margin-left: 0;
-  margin-right: 0;
-  text-align: left;
+  nav li:last-child {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
 }
 
 .archive-link {
@@ -547,10 +553,6 @@ nav li:last-child {
 @media only screen and (min-width: 320px) and (max-width: 500px) {
   footer section span.copyright {
     display: block
-  }
-
-  nav li {
-    width: auto
   }
 
   .older-posts, .newer-posts {

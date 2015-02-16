@@ -1,2 +1,2 @@
-(function(){var a;a=["Nothing to see here. Move along...","These are not the droids you're looking for...","This is no moon..."],console.log(_.sample(a)),console.log("But have you been to http://firstdoit.com?")}).call(this);
+(function(){var a,b;a=["Nothing to see here. Move along...","These are not the droids you're looking for...","This is no moon..."],console.log(_.sample(a)),console.log("But have you been to http://firstdoit.com?"),b=new Headroom($(".navbar")[0],{offset:5,tolerance:5,classes:{initial:"animated",pinned:"slideDown",unpinned:"slideUp"}}),b.init()}).call(this);
 //# sourceMappingURL=main.js.map

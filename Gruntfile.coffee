@@ -45,7 +45,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: 'assets/style'
-          src: ['**/*.less', '!variables.less']
+          src: ['screen.less', 'bootstrap.less']
           dest: "assets/style"
           ext: '.css'
         ]
