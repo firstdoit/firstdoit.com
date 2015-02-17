@@ -24,6 +24,10 @@ body {
   background-color: @bodyBackgroundColor;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 h1, h2, h3, h4, p, li, dt, dd {
   font-family: @baseFontFamily;
 }
@@ -57,7 +61,7 @@ li {
 }
 
 pre {
-  padding: 1em;
+  padding: 0.5em 1em;
   font-family: @preFontFamily;
   font-size: 1em;
   line-height: 1.2em;
@@ -70,12 +74,17 @@ pre {
   background-color: @subtleColor;
   code {
     font-family: @preFontFamily;
+    font-size: @codeFontSize;
+  }
+
+  .hljs {
+    background: none;
   }
 }
 
 p code {
   font-family: @preFontFamily;
-  font-size: @smallFontSize;
+  font-size: @codeFontSize;
   padding: @smallFontSize/3;
   background-color: @subtleColor;
 }
