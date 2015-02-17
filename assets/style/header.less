@@ -2,6 +2,10 @@
   height: @headerHeight;
   margin-bottom: @margin/2;
 
+  .navbar-header {
+    float: left;
+  }
+
   .navbar {
     height: @headerHeight;
     min-height: @headerHeight;
@@ -20,21 +24,17 @@
     vertical-align: middle;
     height: auto;
     line-height: inherit;
+    margin-left: 5px;
   }
 
-  .navbar .navbar-nav {
-    display: inline-block;
-    float: none;
-    vertical-align: top;
-  }
-
-  .navbar .navbar-collapse {
-    text-align: center;
+  .navbar-nav {
+    margin: 0;
   }
 
   .navbar-nav>li {
     font-family: @secondaryFontFamily;
     padding: 0;
+    float: left;
   }
   .navbar-nav>li>a {
     padding: @headerHeight/4;
