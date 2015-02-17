@@ -1,28 +1,22 @@
-# Mercury Vapor
+# firstdoit.com
 
-This is my personal fork of the [Vapor Theme](https://github.com/sethlilly/Vapor) by Seth Lilly.
+This is my personal site.
+
+The theme is a fork of the [Vapor Theme](https://github.com/sethlilly/Vapor) by Seth Lilly.
 
 You are welcome to use it, modify it or otherwise do as you please.
 
-Please mind the Google Analytics and Disqus variables, though ;)
+**Please mind the Google Analytics and Disqus variables, though ;)**
 
 ## Getting started
 
-Clone this theme:
-
-    git clone git@github.com:firstdoit/mercury-vapor
-
-Clone the Ghost repository in a sibling directory:
-
+    git clone git@github.com:firstdoit/firstdoit.com
     git clone git@github.com:TryGhost/Ghost.git
-
-Symlink `mercury-vapor` into ghost's `themes` folder
-
-    ln -s ~/Projects/mercury-vapor ~/Projects/Ghost/content/themes/mercury-vapor
+    ln -s ~/Projects/firstdoit.com ~/Projects/Ghost/content/themes/firstdoit.com
 
 Install dependencies and start grunt
 
-    cd mercury-vapor
+    cd firstdoit.com
     npm i
     grunt
 
