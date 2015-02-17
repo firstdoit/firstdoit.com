@@ -4,18 +4,19 @@
 // Styles
 @import "headroom";
 @import "header";
+@import "article";
 @import "intro";
 @import "footer";
 
 /* === Core Styles === */
 
-@import url(//fonts.googleapis.com/css?family=Ubuntu:400,700|Vollkorn:400italic,400,700);
+@import url(//fonts.googleapis.com/css?family=Ubuntu:400,700|Source+Sans+Pro:400,700|Source+Code+Pro:400);
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
 body {
   padding: 0;
   margin: 0;
-  font-size: 15px;
+  font-size: @defaultFontSize;
   -webkit-font-smoothing: subpixel-antialiased;
   font-weight: 100;
   line-height: 1.6em;
@@ -43,9 +44,8 @@ a:focus, a:hover {
 }
 
 p, li, dt, dd {
-  font-size: 18px;
-  font-weight: 100;
-  line-height: 30px;
+  font-size: 1em;
+  line-height: 1.5em;
 }
 
 dt {
@@ -68,19 +68,23 @@ pre {
   white-space: -pre-wrap;
   white-space: -o-pre-wrap;
   background-color: @subtleColor;
+  code {
+    font-family: @preFontFamily;
+  }
 }
 
 p code {
   font-family: @preFontFamily;
-  font-size: .8em;
-  line-height: 1.2em;
+  font-size: @smallFontSize;
+  padding: @smallFontSize/3;
+  background-color: @subtleColor;
 }
 
 h1 {
   padding: 0;
   margin: 0;
   font-family: @headerFontFamily;
-  font-size: 36px;
+  font-size: @largeFontSize;
   font-weight: 400;
   line-height: 42px;
   color: @headerFontColor;
@@ -191,7 +195,7 @@ article, .preview, .archive-link, .article-nav {
 }
 
 .author .attr, .share .info {
-  font-size: 16px;
+  font-size: 1em;
   line-height: 20px;
   text-transform: uppercase;
   font-family: @secondaryFontFamily;
@@ -228,16 +232,6 @@ blockquote p {
   font-weight: 400;
   line-height: 1.2em;
   font-style: italic;
-}
-
-.post-meta {
-  color: @postmetaColor;
-  font-family: @secondaryFontFamily;
-  font-size: 20px;
-  font-weight: 300;
-  margin-top: 1em;
-  margin-bottom: 1.2em;
-  text-transform: uppercase;
 }
 
 .tags {

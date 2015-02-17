@@ -1,16 +1,18 @@
 .site-head {
-  height: 42px;
+  height: @headerHeight;
   margin-bottom: @margin/2;
 
   .navbar {
-    height: 42px;
-    min-height: 42px;
+    height: @headerHeight;
+    min-height: @headerHeight;
   }
 
   .navbar-brand {
-    padding: 10px;
+    padding: @headerHeight/5;
     text-transform: uppercase;
+    font-size: 1em;
     font-weight: 800;
+    font-family: @headerFontFamily;
     color: #ccc;
     display: block;
     float: none;
@@ -31,9 +33,10 @@
   }
 
   .navbar-nav>li {
+    font-family: @secondaryFontFamily;
     padding: 0;
   }
   .navbar-nav>li>a {
-    padding: 11px 0 11px 15px;
+    padding: @headerHeight/4;
   }
 }
