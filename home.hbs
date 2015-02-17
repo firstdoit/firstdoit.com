@@ -1,7 +1,13 @@
 {{!< default}}
 
-<section class="intro">
+<section class="intro subheader">
+    {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><div style="background: url({{@blog.logo}})"></div></a>{{/if}}
+    <h2 class="blog-description">
+        {{@blog.description}}
+    </h2>
 </section>
+
+{{> blog-links}}
 
 <section class="content blog">
 

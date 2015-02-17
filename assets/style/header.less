@@ -1,12 +1,15 @@
-header {
-  .navbar-header {
-    width: 100%;
+.site-head {
+  height: 42px;
+
+  .navbar {
+    height: 42px;
+    min-height: 42px;
   }
+
   .navbar-brand {
-    margin: 20px auto !important;
+    padding: 10px;
     text-transform: uppercase;
     font-weight: 800;
-    font-size: 40pt;
     color: #ccc;
     display: block;
     float: none;
@@ -14,10 +17,6 @@ header {
     vertical-align: middle;
     height: auto;
     line-height: inherit;
-  }
-
-  .subheader {
-    margin-top: @navbarHeight;
   }
 
   .navbar .navbar-nav {
@@ -28,5 +27,12 @@ header {
 
   .navbar .navbar-collapse {
     text-align: center;
+  }
+
+  .navbar-nav>li {
+    padding: 0;
+  }
+  .navbar-nav>li>a {
+    padding: 11px 0 11px 15px;
   }
 }

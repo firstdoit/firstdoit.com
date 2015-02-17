@@ -9,7 +9,6 @@ greetings = [
 console.log _.sample(greetings)
 console.log 'But have you been to http://firstdoit.com?'
 
-
 ###
 headroom
 ###
