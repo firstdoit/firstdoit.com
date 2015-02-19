@@ -28,7 +28,11 @@ html {
   overflow-y: scroll;
 }
 
-h1, h2, h3, h4, p, li, dt, dd {
+h1, h2, h3, h4 {
+  font-family: @headerFontFamily;
+}
+
+p, li, dt, dd {
   font-family: @baseFontFamily;
 }
 
@@ -113,8 +117,8 @@ article, .preview, .archive-link, .article-nav {
   margin-bottom: @margin;
   .readmore {
     margin-top: 1em;
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
-    font-weight: 300;
+    font-family: @baseFontFamily;
+    font-weight: 400;
     text-transform: uppercase;
   }
 }
@@ -224,25 +228,6 @@ article, .preview, .archive-link, .article-nav {
   line-height: 1.4em;
 }
 
-blockquote {
-  font-family: @secondaryFontFamily;
-  font-size: 1.4em;
-  font-weight: 400;
-  line-height: 1.2em;
-  font-style: italic;
-  border-left: .5em solid @subtleColor;
-  margin-left: 1em;
-  padding-left: 1em;
-}
-
-blockquote p {
-  font-family: @secondaryFontFamily;
-  font-size: 1.4em;
-  font-weight: 400;
-  line-height: 1.2em;
-  font-style: italic;
-}
-
 .tags {
   font-size: 16px;
   margin-bottom: 0.6em;
@@ -269,22 +254,10 @@ blockquote p {
   text-decoration: none;
 }
 
-h2 {
-  margin-top: 2em;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-}
-
 .blog-title {
   letter-spacing: inherit;
 }
 
-h3 {
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-}
 
 .post-content img {
   display: block;
