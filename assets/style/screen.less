@@ -28,8 +28,9 @@ html {
   overflow-y: scroll;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   font-family: @headerFontFamily;
+  font-weight: 400;
 }
 
 p, li, dt, dd {
@@ -89,7 +90,7 @@ pre {
 p code {
   font-family: @preFontFamily;
   font-size: @codeFontSize;
-  padding: @smallFontSize/3;
+  padding: .15em .3em;
   background-color: @subtleColor;
 }
 
@@ -98,7 +99,6 @@ h1 {
   margin: 0;
   font-family: @headerFontFamily;
   font-size: @largeFontSize;
-  font-weight: 400;
   line-height: 42px;
   color: @headerFontColor;
 }
