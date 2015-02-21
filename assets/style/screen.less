@@ -6,6 +6,7 @@
 @import "header";
 @import "article";
 @import "intro";
+@import "author";
 @import "footer";
 
 /* === Core Styles === */
@@ -173,63 +174,19 @@ article, .preview, .archive-link, .article-nav {
 
 /* === Body === */
 
-.author, .share {
-  width: 100%;
-  text-align: left;
-  text-transform: none;
-}
-
 .share {
   margin-top: 1em;
   border-top: 1px solid @borderColor;
   padding-top: 1em;
 }
 
-.author h4, .author p, .share p {
-  padding: 0;
-  margin: 0;
-}
-
-.author h4 {
-  font-family: @headerFontFamily;
-  font-weight: 400;
-  margin-bottom: 4px;
-}
-
-.author .attr, .share .info {
-  font-size: 1em;
-  line-height: 20px;
-  text-transform: uppercase;
-  font-family: @baseFontFamily;
-}
-
-.author .attr {
-  margin-bottom: 2px
-}
-
 .share .info {
   display: inline-block
-}
-
-.author .bio {
-  font-size: 16px;
-  margin-left: 82px;
-  line-height: 1.4em;
 }
 
 .tags {
   font-size: 16px;
   margin-bottom: 0.6em;
-}
-
-.authorimage {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-size: cover !important;
-  background-position: center center !important;
-  margin-right: 10px;
-  float: left;
 }
 
 .post-title a, .blog-title a, .blog-title a {
