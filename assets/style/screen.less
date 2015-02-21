@@ -10,7 +10,7 @@
 
 /* === Core Styles === */
 
-@import url(//fonts.googleapis.com/css?family=Ubuntu:400,700|Source+Sans+Pro:400,700|Source+Code+Pro:400);
+@import url(//fonts.googleapis.com/css?family=Cabin:500|Cutive+Mono|Noto+Sans|Source+Code+Pro:400);
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
 body {
@@ -30,15 +30,11 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: @headerFontFamily;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 p, li, dt, dd {
   font-family: @baseFontFamily;
-}
-
-h1, .post-meta {
-  text-align: center
 }
 
 a, a:visited {
@@ -99,7 +95,7 @@ h1 {
   margin: 0;
   font-family: @headerFontFamily;
   font-size: @largeFontSize;
-  line-height: 42px;
+  line-height: 1.2em;
   color: @headerFontColor;
 }
 
@@ -156,7 +152,7 @@ article, .preview, .archive-link, .article-nav {
 .blog-description {
   padding: .5em 1em;
   margin: 1em 0;
-  font-family: @secondaryFontFamily;
+  font-family: @baseFontFamily;
   font-size: 1.2em;
   font-weight: 400;
   line-height: 1.2em;
@@ -211,7 +207,7 @@ article, .preview, .archive-link, .article-nav {
   font-size: 1em;
   line-height: 20px;
   text-transform: uppercase;
-  font-family: @secondaryFontFamily;
+  font-family: @baseFontFamily;
 }
 
 .author .attr {
@@ -309,7 +305,7 @@ strong {
 
   nav li {
     display: inline-block;
-    font-family: @secondaryFontFamily;
+    font-family: @baseFontFamily;
     font-size: 18px;
     font-weight: 300;
     margin: 0 2em;
@@ -341,7 +337,7 @@ strong {
   border-bottom: 1px solid @borderColor;
   border-top: 1px solid @borderColor;
   display: block;
-  font-family: @secondaryFontFamily;
+  font-family: @baseFontFamily;
   font-size: 24px;
   font-weight: 300;
   margin-bottom: 3em;
@@ -355,7 +351,7 @@ strong {
   position: relative;
   width: 90%;
   max-width: @maxPageWidth;
-  font-family: @secondaryFontFamily;
+  font-family: @baseFontFamily;
   text-transform: uppercase;
   font-size: 20px;
   color: @baseFontColor;
@@ -409,7 +405,7 @@ strong {
 }
 
 .gist .gist-file .gist-meta {
-  font-family: @secondaryFontFamily !important;
+  font-family: @baseFontFamily !important;
   font-weight: 300 !important;
   text-transform: uppercase !important;
   display: none !important; /* Hide GitHub attribution */
