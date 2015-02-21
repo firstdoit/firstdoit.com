@@ -12,7 +12,8 @@
   }
 
   .navbar-brand {
-    padding: @headerHeight/5;
+    padding: @headerHeight/5 0;
+    margin-left: 0 !important;
     text-transform: uppercase;
     font-size: 1em;
     font-weight: 800;
@@ -24,7 +25,6 @@
     vertical-align: middle;
     height: auto;
     line-height: inherit;
-    margin-left: 5px;
   }
 
   .navbar-nav {
@@ -37,7 +37,7 @@
     float: left;
   }
   .navbar-nav>li>a {
-    padding: @headerHeight/4;
+    padding: @headerHeight/4 0 0 @headerHeight/2 !important;
   }
 }
 
