@@ -6,19 +6,21 @@
 
         {{#post}}
 
-        <header>
-        {{#if tags}}<div class="post-meta tags">Posted in {{tags}}</div>{{/if}}
-        <h1 class="post-title">{{{title}}}</h1>
-        <div class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="dddd, MMMM DD, YYYY"}}</time></div>
-        </header>
+        <section class="header-bg">
+            <header class="container">
+                {{#if tags}}<div class="post-meta tags">Posted in {{tags}}</div>{{/if}}
+                <h1 class="post-title">{{{title}}}</h1>
+                <div class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="dddd, MMMM DD, YYYY"}}</time></div>
+            </header>
+        </section>
 
-        <section class="post-content">
+        <section class="post-content container">
             {{content}}
         </section>
 
         {{> share}}
 
-        <footer class="post-footer">
+        <footer class="post-footer container">
 
             {{#if author}}
             <section class="author">

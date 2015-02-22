@@ -74,7 +74,6 @@
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/headroom.min.js"></script>
-    <script src="{{asset "script/main.js"}}"></script>
     <script src="{{asset "highlight/highlight.pack.js"}}"></script>
     <script src="{{asset "could-you-possibly-0.1.1/script/could-you-possibly.min.js"}}"></script>
     <script>hljs.initHighlightingOnLoad();</script>
@@ -91,6 +90,12 @@
             });
         })();
     </script>
+
+    <!-- LOW POLY GENERATION -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.1.5/trianglify.min.js"></script>
+
+    <script src="{{asset "script/main.js"}}"></script>
     <script>
         if ("{{settings.env}}" === "development") {
             document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')

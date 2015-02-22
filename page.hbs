@@ -6,12 +6,14 @@
 
         {{#post}}
 
-        <header>
-        {{#if tags}}<div class="post-meta tags">Posted in {{tags}}</div>{{/if}}
-        <h1 class="post-title">{{{title}}}</h1>
-        </header>
+        <section class="header-bg">
+            <header class="container">
+                {{#if tags}}<div class="post-meta tags">Posted in {{tags}}</div>{{/if}}
+                <h1 class="post-title">{{{title}}}</h1>
+            </header>
+        </section>
 
-        <section class="post-content">
+        <section class="post-content container">
             {{content}}
         </section>
 
