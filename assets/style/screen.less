@@ -16,17 +16,20 @@
 
 body {
   padding: 0;
-  margin: 0;
+  margin: 0 0 (6.67em + @margin) 0;
   font-size: @defaultFontSize;
   -webkit-font-smoothing: subpixel-antialiased;
   font-weight: 100;
   line-height: 1.6em;
   color: @baseFontColor;
   background-color: @bodyBackgroundColor;
+  min-height: 100%;
 }
 
 html {
   overflow-y: scroll;
+  position: relative;
+  min-height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
