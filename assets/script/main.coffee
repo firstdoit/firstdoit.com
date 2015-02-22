@@ -26,12 +26,20 @@ headroom.init()
 ###
 low poly
 ###
-$('.header-bg').each ->
-  pattern = new Trianglify(
-    x_gradient: Trianglify.colorbrewer.Greens[4]
-    y_gradient: Trianglify.colorbrewer.Greens[3]
-    cellsize: 100
-    fillOpacity: 0.2
-    strokeOpacity: 0.05
-  ).generate(this.clientWidth, this.clientHeight)
-  $(this).attr('style', 'background-image: '+pattern.dataUrl)
+renderLowPolyBg = ->
+  $('.header-bg').each ->
+    pattern = new Trianglify(
+      x_gradient: Trianglify.colorbrewer.Greens[4]
+      y_gradient: Trianglify.colorbrewer.Greens[3]
+      cellsize: 100
+      fillOpacity: 0.2
+      strokeOpacity: 0.05
+    ).generate(this.clientWidth, this.clientHeight)
+    $(this).attr('style', 'background-image: '+pattern.dataUrl)
+
+renderLowPolyBg()
+
+resizeTimeout = null
+window.onresize = ->
+  clearTimeout(resizeTimeout)
+  resizeTimeout = setTimeout(renderLowPolyBg, 100)
