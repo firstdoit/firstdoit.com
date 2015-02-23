@@ -88,9 +88,24 @@ module.exports = (grunt) ->
       grunt:
         files: ['Gruntfile.coffee']
 
+    compress:
+      main:
+        options:
+          archive: 'dist/theme.zip'
+          pretty: true
+        files: [
+          {src: ['**/*', '!node_modules/**/*', '!assets/bootstrap/**/*']}
+        ]
+
+    'ghost-upload':
+      main:
+        zip: 'dist/theme.zip'
+        blog: 'firstdoit'
+
   tasks =
     # Building block tasks
     build: ['coffeelint', 'coffee', 'uglify', 'recess', 'less', 'cssmin']
+    deploy: ['build', 'compress', 'ghost-upload']
     # Development tasks
     default: ['build', 'connect', 'watch']
 
