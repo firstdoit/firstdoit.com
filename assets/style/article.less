@@ -10,18 +10,28 @@
 }
 
 article {
-  h1 {
-    display: inline-block;
+
+  .post-content, .post-excerpt {
+    margin-top: 1em;
   }
 
-  h2, h3 {
-    text-transform: uppercase;
+  h2, h3, h4, h5, h6 {
+    margin: 1em 0 0.5em 0;
+  }
+
+  h2 {
+    font-size: 2em;
+    line-height: 1.3em;
   }
 
   hr {
     border: 1px solid #ecf0f1;
     border-bottom: 0;
     color: #ecf0f1;
+  }
+
+  iframe {
+    width: @maxPageWidth;
   }
 }
 .share .could-you-possibly
